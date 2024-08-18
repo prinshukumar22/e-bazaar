@@ -86,6 +86,7 @@ export default function Cart() {
     // Trigger the toast notification
     toast.success("Product ordered successfully!");
     // You can add more logic here for checkout processing
+    cartData.removeAll();
   };
 
   return (

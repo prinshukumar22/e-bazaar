@@ -57,9 +57,22 @@ const CartProvider = ({ children }) => {
     return total;
   };
 
+  const removeAll = () => {
+    dispatch({
+      type: "REMOVE_ALL",
+    });
+  };
+
   return (
     <CartContext.Provider
-      value={{ ...state, addToCart, updateQuantity, removeItem, totalQty }}
+      value={{
+        ...state,
+        addToCart,
+        updateQuantity,
+        removeItem,
+        totalQty,
+        removeAll,
+      }}
     >
       {children}
     </CartContext.Provider>

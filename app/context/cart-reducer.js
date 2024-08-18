@@ -45,5 +45,5 @@ export const cartReducer = (state, action) => {
     return { ...state, cart: newCart };
   }
 
-  return state;
+  return {...state, cart:[]};
 };
